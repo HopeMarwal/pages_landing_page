@@ -1,0 +1,55 @@
+@import './var';
+
+.promo-wrapper {
+  background-color: $main-clr;
+  .promo {
+    max-width: 1200px;
+    margin: auto;
+    padding: 70px 10px;
+    display: flex;
+    align-items: center;
+    color: $second-clr;
+    font-size: 20px;
+  }
+  .promo-col {
+    width: 50%;
+  }
+  img {
+    width: 100%;
+  }
+  h3 {
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 2.2em;
+    font-weight: 300;
+  }
+  .yellow {
+    font-size: 50px;
+    color: $btn-bg-clr;
+  }
+  .subtitle {
+    font-size: 0.95em;
+    line-height: 1.5em;
+    font-family: $inter-font;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+  .btn {
+    background-color: transparent;
+    color: #fff;
+  }
+}
+
+@media (max-width: 768px) {
+  .promo-wrapper {
+    .promo {
+      text-align: center;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    .promo-col {
+      width: 80%;
+      margin: auto;
+    }
+  }
+}
