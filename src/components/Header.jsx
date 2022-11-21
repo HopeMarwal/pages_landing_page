@@ -37,7 +37,7 @@ export default function Header() {
                   <div className="info-item" key={index}>
                     
                     <div className="info-body">
-                      <BsFillCircleFill className='yellow' />
+                      <BsFillCircleFill className='circle' />
                       <span className='info-title'>{item.title}</span>
                       
                     </div>

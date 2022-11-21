@@ -3,8 +3,10 @@ import About from "./container/About";
 import Stores from './container/Stores';
 import Promo from './container/Promo';
 import BookContent from './container/BookContent'
+import Chapters from "./container/Chapters";
 //style
 import '../assets/style/container.scss'
+
 
 export default function Container() {
   return (
@@ -14,6 +16,7 @@ export default function Container() {
       <Stores />
       <Promo />
       <BookContent />
+      <Chapters />
     </div>
   )
 }
