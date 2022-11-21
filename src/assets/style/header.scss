@@ -1,0 +1,138 @@
+@import './var';
+
+.header {
+  background-color: $main-clr;
+  color: #fff;
+  padding: 20px 10px 50px 10px;
+  > div {
+    max-width: 1200px;
+    margin: auto;
+  }
+  &-container {
+    padding-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    letter-spacing: 1.2px;
+    font-family: $cardo-font;
+    font-size: 20px;
+    .yellow {
+      color: $btn-bg-clr;
+    }
+    .left {
+      width: 50%;
+    }
+    .heading {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      font-size: 1.1em;
+    }
+    .title {
+      font-size: 2.5em;
+      letter-spacing: 1.3px;
+      margin-bottom: 0.5em;
+    }
+    .desc {
+      font-family: $inter-font;
+      font-size: 0.9em;
+      color: $second-clr;
+      line-height: 1.4em;
+      margin-bottom: 1.5em;
+    }
+    .btn-container {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      margin-bottom: 40px;
+      .link {
+        cursor: pointer;
+        text-transform: capitalize;
+        font-size: 1em;
+        border: none;
+        border-bottom: 1px solid #fff;
+        padding: 5px;
+      }
+    }
+    .info-container {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      .info-body {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-bottom: 15px;
+      }
+      .info-title {
+        font-size: 1.2em;
+        text-transform: capitalize;
+      }
+      .info-text {
+        display: block;
+        margin-left: 20px;
+        font-size: 0.85em;
+        color: $second-clr;
+        font-family: $inter-font;
+      }
+    }
+    .right {
+      width: 50%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .header {
+    .header-container {
+      font-size: 16px;
+      .btn-container {
+        .btn {
+          padding: 16px 20px;
+        }
+      }
+      .info-container {
+        gap: 15px;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    .header-container {
+      padding-top: 30px;
+      font-size: 20px;
+      text-align: center;
+      gap: 40px;
+      .left {
+        width: 100%;
+      }
+      .right {
+        width: 60%;
+        margin: auto;
+      }
+      .btn-container {
+        justify-content: space-around;
+        .btn {
+          padding: 16px 20px;
+          font-size: 1em;
+        }
+      }
+      .info-container {
+        justify-content: space-around;
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  .header {
+    .header-container {
+      font-size: 16px;
+      .right {
+        width: 80%;
+      }
+    }
+  }
+}

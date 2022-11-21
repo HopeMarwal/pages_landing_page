@@ -1,0 +1,149 @@
+@import './var';
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $inter-font;
+  gap: 10px;
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+  }
+  &-container {
+    flex: 1;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    span {
+      color: $logo-clr;
+      font-size: 24px;
+      font-weight: 700;
+      margin-left: 5px;
+    }
+  }
+  .icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    img {
+      transition: all 0.3s linear;
+      transform: scale(1); 
+      &:hover {
+        transform: scale(1.09);
+      }
+    }
+  }
+  .cart {
+    img {
+      filter: contrast(100%);
+    }
+  }
+  .links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+    .link-item {
+      color: $navlinks-clr;
+      font-size: 16px;
+      letter-spacing: 0.17px;
+      font-family: $inter-font;
+      font-weight: 300;
+      transition: all 0.3s linear;
+      transform: scale(1); 
+      &.active {
+        color: $btn-bg-clr;
+      }
+      &:hover {
+        color: $btn-bg-clr;
+        transform: scale(1.09);
+      }
+    }
+  }
+  .cart {
+    cursor: pointer;
+  }
+  .menu {
+    display: none;
+  }
+
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    gap: 10px;
+    .menu {
+      display: block;
+      flex: 1;
+      span {
+        cursor: pointer;
+      }
+    }
+    &-container {
+      position: fixed;
+      z-index: -1;
+      width: 100vw;
+      height: 100vh;
+      top: 69.5px;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.558);
+      transform: translateX(-100%);
+    }
+    &-wrapper {
+      width: 300px;
+      overflow: hidden;
+      transform: translateX(-100%);
+      transition: all 0.5s ease-in;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: calc(100vh - 69.5px);
+      background-color: $main-clr;
+      flex-direction: column;
+      padding: 10px 0;
+      border-top: 1px solid #ccc;
+      display: flex;
+      .links {
+        flex-direction: column;
+        gap: 15px;
+        margin: auto;
+        .link-item {
+          font-size: 20px;
+        }
+      }
+      .cart {
+        margin-bottom: 15px;
+      }
+      .btn-container {
+        width: 100%;
+        .btn {
+          width: 100%;
+        }
+      }
+    }
+    //open menu style
+    &.show {
+      position: fixed;
+      left: 0;
+      top: 0;
+      background-color: $main-clr;
+      width: 100%;
+      padding: 20px 10px;
+      z-index: 1000;
+      .navbar-container {
+        z-index: 1000;
+        transform: translateX(0);
+        scroll-behavior: unset;
+      }
+      .navbar-wrapper {
+        transform: translateX(0);
+      }
+    }
+  }
+}

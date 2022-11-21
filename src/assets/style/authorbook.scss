@@ -1,0 +1,118 @@
+@import './var';
+
+.authorBook {
+  padding: 100px 10px;
+  font-size: 20px;
+  max-width: 1200px;
+  margin: auto;
+  .heading {
+    text-align: center;
+  }
+  .yellow {
+    font-size: 50px;
+    color: $btn-bg-clr;
+  }
+  h3 {
+    font-size: 2.1em;
+    text-transform: capitalize;
+    font-weight: 300;
+  }
+  .book-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    .book-item {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .image {
+      width: 50%;
+      img {
+        width: 100%;
+        filter: drop-shadow(0px 0px 11px rgba(0, 0, 0, 0.2));
+      }
+    }
+    .info {
+      width: 50%;
+      padding: 40px 0;
+      h4 {
+        font-size: 1.5em;
+        font-weight: 300;
+        letter-spacing: 0.32px;
+        text-transform: capitalize;
+        margin-bottom: 0.5em;
+      }
+      .price {
+        font-family: $inter-font;
+        font-size: 1em;
+        color: $btn-bg-clr;
+        font-weight: 300;
+        margin-bottom: 0.7em;
+      }
+      .desc {
+        font-family: $inter-font;
+        font-size: 0.9em;
+        color: $gray-clr;
+        line-height: 1.7em;
+        margin-bottom: 8px;
+        font-weight: 300;
+      }
+      .type-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+        .type {
+          font-size: 1.25em;
+          text-transform: capitalize;
+        }
+        .yellow {
+          font-size: 1em;
+        }
+      }
+      .btn {
+        background: transparent;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .authorBook {
+    font-size: 16px;
+    .book-container {
+      .info {
+        padding: 20px 0;
+        .btn {
+          padding: 10px 16px;
+          font-size: 1em;
+        }
+      }
+      
+    }
+  }
+}
+@media (max-width: 768px) {
+  .authorBook {
+    .book-container {
+      flex-wrap: wrap;
+      .book-item {
+        width: 80%;
+        margin: auto;
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  .authorBook {
+    .book-container {
+      flex-wrap: wrap;
+      .book-item {
+        width: 100%;
+        margin: auto;
+      }
+    }
+  }
+}
