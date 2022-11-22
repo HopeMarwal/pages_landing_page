@@ -4,6 +4,7 @@ import Stores from './container/Stores';
 import Promo from './container/Promo';
 import BookContent from './container/BookContent'
 import Chapters from "./container/Chapters";
+import Reviews from "./container/Reviews";
 //style
 import '../assets/style/container.scss'
 
@@ -17,6 +18,7 @@ export default function Container() {
       <Promo />
       <BookContent />
       <Chapters />
+      <Reviews />
     </div>
   )
 }
