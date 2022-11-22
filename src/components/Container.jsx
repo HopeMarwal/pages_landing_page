@@ -5,6 +5,7 @@ import Promo from './container/Promo';
 import BookContent from './container/BookContent'
 import Chapters from "./container/Chapters";
 import Reviews from "./container/Reviews";
+import Articles from "./container/Articles";
 //style
 import '../assets/style/container.scss'
 
@@ -19,6 +20,7 @@ export default function Container() {
       <BookContent />
       <Chapters />
       <Reviews />
+      <Articles />
     </div>
   )
 }
