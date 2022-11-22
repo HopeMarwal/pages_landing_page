@@ -10,7 +10,6 @@
   }
   h3 {
     font-size: 2em;
-    font-weight: 300;
     text-transform: capitalize;
     margin-bottom: 0.7em;
   }
@@ -30,11 +29,9 @@
       font-size: 1.2em;
       margin-bottom: 16px;
       text-transform: capitalize;
-      font-weight: 300;
     }
     .desc {
       font-family: $inter-font;
-      font-weight: 300;
       font-size: 0.8em;
       color: $gray-clr;
       line-height: 1.5em;

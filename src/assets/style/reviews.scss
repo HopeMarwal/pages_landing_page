@@ -16,13 +16,11 @@
   }
   h3 {
     font-size: 2.1em;
-    font-weight: 300;
     margin-bottom: 0.5em;
     text-transform: capitalize;
   }
   .subtitle {
     font-family: $inter-font;
-    font-weight: 300;
     font-size: 0.9em;
     line-height: 1.7em;
     color: $gray-clr;
@@ -66,7 +64,6 @@
     }
     .name {
       font-size: 1.2em;
-      font-weight: 300;
       margin-bottom: 5px;
       text-transform: capitalize;
     }
@@ -74,7 +71,6 @@
     /* body item*/
   .title {
     font-size: 1.1em;
-    font-weight: 300;
     text-transform: capitalize;
     margin-bottom: 15px;
   }
@@ -83,7 +79,6 @@
     font-size: 0.9em;
     line-height: 1.4em;
     color: $second-clr;
-    font-weight: 300;
   }
   
 }

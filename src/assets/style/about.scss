@@ -30,14 +30,12 @@
       h3 {
         font-size: 2em;
         text-transform: capitalize;
-        font-weight: 200;
       }
       .yellow {
         margin-top: 10px;
       }
       .desc {
         font-size: 1em;
-        font-weight: 300;
         line-height: 1.8em;
         color: $gray-clr;
         font-family: $inter-font;
@@ -61,8 +59,6 @@
         }
         &-num {
           font-size: 2.5em;
-          font-weight: 300;
-          
         }
         &-desc {
           text-transform: capitalize;
@@ -83,7 +79,6 @@
         &-info {
           p {
             margin-bottom: 10px;
-            font-weight: 300;
           }
           .name {
             color: $btn-bg-clr;

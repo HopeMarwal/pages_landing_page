@@ -11,7 +11,6 @@
   h3 {
     font-size: 2.1em;
     text-transform: capitalize;
-    font-weight: 300;
   }
   .book-container {
     display: flex;
@@ -35,7 +34,6 @@
       padding: 40px 0;
       h4 {
         font-size: 1.5em;
-        font-weight: 300;
         letter-spacing: 0.32px;
         text-transform: capitalize;
         margin-bottom: 0.5em;
@@ -44,7 +42,6 @@
         font-family: $inter-font;
         font-size: 1em;
         color: $btn-bg-clr;
-        font-weight: 300;
         margin-bottom: 0.7em;
       }
       .desc {
@@ -53,7 +50,6 @@
         color: $gray-clr;
         line-height: 1.7em;
         margin-bottom: 8px;
-        font-weight: 300;
       }
       .type-wrapper {
         display: flex;
