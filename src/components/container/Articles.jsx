@@ -3,9 +3,26 @@ import '../../assets/style/articles.scss'
 //icon 
 import { MdOutlineMaximize } from 'react-icons/md'
 //data
-import articles from '../../data/articles'
+import articles from '../../data/articles';
+//sanity 
+import { client, urlFor } from '../../lib/client'
+//react 
+import { useEffect, useState } from 'react';
 
 export default function Articles() {
+
+  const [articlesData, setArticlesData] = useState(null)
+
+  useEffect(() => {
+    client
+      .fetch('*[_type == "articles"]')
+      .then(res => {
+        setArticlesData(res)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  }, []) 
   return (
     <div className='articles-wrapper'>
       <div className="articles">
@@ -14,12 +31,12 @@ export default function Articles() {
 
         <div className="article-container">
           {
-            articles.map((item) => {
+            articlesData?.map((item) => {
               return (
                 <div className="article-item" key={item.id} >
 
                   <div className="img-container">
-                    <img src={item.img} alt="article" />
+                    <img src={urlFor(item.image)} alt="article" />
                   </div>
 
                   <div className="item-body">

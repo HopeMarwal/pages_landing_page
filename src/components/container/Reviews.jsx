@@ -2,14 +2,29 @@
 import { Rating } from 'react-simple-star-rating';
 //icon
 import { MdOutlineMaximize } from 'react-icons/md';
-//data
-import reviews from '../../data/reviews';
+//sanity 
+import { client, urlFor } from '../../lib/client'
 //style
 import '../../assets/style/reviews.scss'
-
+//react
+import { useEffect, useState } from 'react';
 
 
 export default function Reviews() {
+
+  const [reviewsData, setReviewsData] = useState(null)
+
+  useEffect(() => {
+    client
+      .fetch('*[_type == "reviews"]')
+      .then(res => {
+        setReviewsData(res)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  }, []) 
+
   return (
     <div className='reviews-wrapper'>
       <div className="reviews">
@@ -34,13 +49,13 @@ export default function Reviews() {
 
         <div className="right">
           {
-            reviews.map((item) => {
+            reviewsData?.map((item) => {
               return (
                 <div className='review-item' key={item.id}>
 
                   {/* review item heading  */}
                   <div className="heading">
-                    <img src={item.img} alt={item.name} />
+                    <img src={urlFor(item.image)} alt={item.name} />
 
                     <div className="info">
                       <p className="name">{item.name}</p>

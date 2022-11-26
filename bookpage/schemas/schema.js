@@ -4,6 +4,8 @@ import books from './books';
 import stores from './stores';
 import header from './header';
 import chapters from './chapters';
+import reviews from './reviews';
+import articles from './articles';
 
 export default createSchema({
   name: 'default',
@@ -11,6 +13,8 @@ export default createSchema({
     books,
     stores,
     header,
-    chapters
+    chapters,
+    reviews,
+    articles
   ]),
 })
