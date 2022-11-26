@@ -13,7 +13,6 @@ export default function AuthorBook() {
     client
       .fetch('*[_type == "books"]')
       .then(res => {
-        console.log(res)
         setBooks(res)
       })
       .catch(err => {

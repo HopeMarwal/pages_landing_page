@@ -1,15 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from './Navbar';
-//data
-import header from '../data/header'
+
 //icon
 import {BsFillCircleFill} from 'react-icons/bs'
 import {HiOutlineMinus} from 'react-icons/hi'
+//sanity
+import { client, urlFor} from '../lib/client'
 
 //style 
 import '../assets/style/header.scss'
 
 export default function Header() {
+
+  const [headerData, setHeaderData] = useState(null)
+
+  useEffect(() => {
+    client
+      .fetch('*[_type == "header"]')
+      .then(res => {
+        setHeaderData(res[0])
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  }, [])
+
   return (
     <div className='header'>
       <Navbar />
@@ -19,20 +34,20 @@ export default function Header() {
           
           <span className='heading'> 
             <HiOutlineMinus className='yellow'/> 
-            {header.greeting}
+            {headerData?.greeting}
           </span>
 
-          <p className='title'>{header.title}</p>
-          <p className='desc'>{header.desc}</p>
+          <p className='title'>{headerData?.title}</p>
+          <p className='desc'>{headerData?.desc}</p>
 
           <div className="btn-container">
-            <button className='btn'>{header.btnText}</button>
-            <span className='link'>{header.linkText}</span>
+            <button className='btn'>{headerData?.btnText}</button>
+            <span className='link'>{headerData?.linkText}</span>
           </div>
 
           <div className="info-container">
             {
-              header.info.map((item, index) => {
+              headerData?.info?.map((item, index) => {
                 return (
                   <div className="info-item" key={index}>
                     
@@ -53,7 +68,10 @@ export default function Header() {
 
         </div>
         <div className='right'>
-          <img src={header.image} alt="the dark light book" />
+          {
+            headerData && <img src={urlFor(headerData.image)} alt="the dark light book" />
+          }
+          
         </div>
       </div>
     </div>
