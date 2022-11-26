@@ -1,13 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 //icon
 import { MdOutlineMaximize } from 'react-icons/md'
 import { BsFillCircleFill } from 'react-icons/bs'
-//data 
-import dataBooks from '../../data/books'
 //style
 import '../../assets/style/authorbook.scss'
+//sanity 
+import { client, urlFor } from '../../lib/client'
 
 export default function AuthorBook() {
+  const [books, setBooks] = useState([])
+  useEffect(() => {
+    client
+      .fetch('*[_type == "books"]')
+      .then(res => {
+        console.log(res)
+        setBooks(res)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  }, [])
+
   return (
     <div className='authorBook'>
       <div className="heading">
@@ -16,12 +29,12 @@ export default function AuthorBook() {
       </div>
       <div className='book-container'>
         {
-          dataBooks.map((item, index) => {
+          books?.map((item, index) => {
             return (
               <div className='book-item' key={index}>
 
                 <div className="image">
-                  <img src={item.image} alt={item.title} />
+                  <img src={urlFor(item.image)} alt={item.title} />
                 </div>
 
                 <div className='info'>
