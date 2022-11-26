@@ -1,12 +1,28 @@
-//data
-import chapters from "../../data/chapters";
+//sanity data
+import { client } from '../../lib/client'
 //icons
 import { MdOutlineMaximize } from 'react-icons/md'
 import {BsFillCircleFill} from 'react-icons/bs'
 //style
 import '../../assets/style/chapters.scss'
+import { useEffect, useState } from "react";
 
 export default function Chapters() {
+
+  const [chaptersData, setChaptersData] = useState(null)
+
+  useEffect(() => {
+    client
+      .fetch('*[_type == "chapters"]')
+      .then(res => {
+        console.log(res)
+        setChaptersData(res)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  }, [])
+
   return (
     <div className="chapters-wrapper">
       <div className="chapters">
@@ -16,7 +32,7 @@ export default function Chapters() {
 
         <div className="chapters-container">
           {
-            chapters.map((item) => {
+            chaptersData?.map((item) => {
               return (
                 <div className="chapter" key={item.chapterNum}>
 
