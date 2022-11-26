@@ -40,7 +40,7 @@ export default function AuthorBook() {
                 <div className='info'>
                   <h4>{item.title}</h4>
                   <p className='price'>$ {item.price} USD</p>
-                  <p className='desc'>{item.desc}</p>
+                  <p className='desc'>{item.description}</p>
                   <div className='type-wrapper'>
                     <BsFillCircleFill className='circle'/>
                     <p className='type'>{item.type}</p>

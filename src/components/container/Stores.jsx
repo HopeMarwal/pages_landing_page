@@ -1,10 +1,24 @@
-import stores from '../../data/stores'
 //style
 import '../../assets/style/stores.scss'
 //icon
 import { MdOutlineMaximize } from 'react-icons/md'
+//sanity
+import { client, urlFor} from '../../lib/client'
+import { useEffect, useState } from 'react'
 
 export default function Stores() {
+  const [stores, setStores] = useState([])
+  
+  useEffect(() => {
+    client
+    .fetch('*[_type == "stores"]')
+    .then(res => {
+      setStores(res)
+    })
+    .catch(err => {
+      console.log(err)
+    })
+  }, [])
   return (
     <div className='stores-wrapper'>
       <div className="stores">
@@ -13,15 +27,15 @@ export default function Stores() {
 
         <div className="stores-container">
           {
-            stores.map((item, index) => {
+            stores?.map((item, index) => {
               return (
                 <div className='store' key={index}>
                   <div className="img-store">
-                    <img src={item.image} alt={item.title} />
+                    <img src={urlFor(item.image)} alt={item.title} />
                   </div>
                   
                   <p className="title">{item.title}</p>
-                  <p className="desc">{item.desc}</p>
+                  <p className="desc">{item.description}</p>
                 </div>
               )
             })
