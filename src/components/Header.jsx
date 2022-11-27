@@ -47,6 +47,7 @@ export default function Header() {
           </div>
 
           <div className="info-container">
+            {/* map header data array */}
             {
               headerData?.info?.map((item, index) => {
                 return (
