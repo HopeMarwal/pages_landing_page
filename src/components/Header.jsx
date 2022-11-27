@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+//react
+import { useEffect, useState } from 'react';
+//components
 import Navbar from './Navbar';
-
 //icon
 import {BsFillCircleFill} from 'react-icons/bs'
 import {HiOutlineMinus} from 'react-icons/hi'
