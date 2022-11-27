@@ -27,7 +27,7 @@ export default function Stores() {
         <MdOutlineMaximize className='yellow' />
 
         <div className="stores-container">
-          
+          {/* map stores array data */}
           {
             stores?.map((item, index) => {
               return (
