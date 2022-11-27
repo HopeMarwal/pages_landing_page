@@ -48,6 +48,7 @@ export default function Reviews() {
         </div>
 
         <div className="right">
+          {/* map review array */}
           {
             reviewsData?.map((item) => {
               return (
