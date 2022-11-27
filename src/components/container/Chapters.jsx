@@ -5,6 +5,7 @@ import { MdOutlineMaximize } from 'react-icons/md'
 import {BsFillCircleFill} from 'react-icons/bs'
 //style
 import '../../assets/style/chapters.scss'
+//raect
 import { useEffect, useState } from "react";
 
 export default function Chapters() {
@@ -31,6 +32,7 @@ export default function Chapters() {
         <MdOutlineMaximize className="yellow" />
 
         <div className="chapters-container">
+          {/* map chapter array */}
           {
             chaptersData?.map((item) => {
               return (
