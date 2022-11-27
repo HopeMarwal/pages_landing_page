@@ -4,6 +4,7 @@ import '../../assets/style/stores.scss'
 import { MdOutlineMaximize } from 'react-icons/md'
 //sanity
 import { client, urlFor} from '../../lib/client'
+//react
 import { useEffect, useState } from 'react'
 
 export default function Stores() {
@@ -26,6 +27,7 @@ export default function Stores() {
         <MdOutlineMaximize className='yellow' />
 
         <div className="stores-container">
+          
           {
             stores?.map((item, index) => {
               return (
