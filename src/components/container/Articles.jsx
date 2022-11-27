@@ -28,6 +28,7 @@ export default function Articles() {
         <MdOutlineMaximize className='yellow' />
 
         <div className="article-container">
+          {/* map article array */}
           {
             articlesData?.map((item) => {
               return (

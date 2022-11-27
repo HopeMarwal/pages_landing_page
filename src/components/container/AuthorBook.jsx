@@ -27,6 +27,7 @@ export default function AuthorBook() {
         <MdOutlineMaximize className='yellow'/>
       </div>
       <div className='book-container'>
+        {/* map books array */}
         {
           books?.map((item, index) => {
             return (
