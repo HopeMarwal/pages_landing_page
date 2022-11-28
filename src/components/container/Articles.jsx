@@ -1,6 +1,6 @@
 //style
 import '../../assets/style/articles.scss'
-//icon 
+//react icon 
 import { MdOutlineMaximize } from 'react-icons/md'
 //sanity 
 import { client, urlFor } from '../../lib/client'
