@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-//react icons
+//React icons
 import { MdOutlineMaximize } from 'react-icons/md'
 import { BsFillCircleFill } from 'react-icons/bs'
-//style
+//Style
 import '../../assets/style/authorbook.scss'
-//sanity 
+//Sanity 
 import { client, urlFor } from '../../lib/client'
 
 export default function AuthorBook() {
