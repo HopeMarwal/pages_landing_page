@@ -46,7 +46,7 @@ export default function About() {
 
           </div>
 
-          
+          {/* Contacts */}
           <div className="contacts">
             <div className="contacts-code">
               <img src={qrCode} alt="qr-code" />
