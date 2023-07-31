@@ -8,7 +8,7 @@ import Chapters from "./container/Chapters";
 import Reviews from "./container/Reviews";
 import Articles from "./container/Articles";
 import Subscribe from "./container/Subscribe";
-//style
+//styles
 import '../assets/style/container.scss'
 
 
