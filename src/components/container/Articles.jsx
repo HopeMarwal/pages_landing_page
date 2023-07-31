@@ -4,7 +4,7 @@ import '../../assets/style/articles.scss'
 import { MdOutlineMaximize } from 'react-icons/md'
 //sanity 
 import { client, urlFor } from '../../lib/client'
-//react 
+//reac
 import { useEffect, useState } from 'react';
 
 export default function Articles() {
